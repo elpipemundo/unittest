@@ -39,4 +39,20 @@ public class CalculadoraTest {
         String respuesta=calculadora.calcular(1);
         assertThat(respuesta,equalTo("I"));
     }
+
+    @Test
+    public void cuandoIngresa1000EntoncesRetornaM(){
+        Mockito.when(calculadora.construirRomano(Mockito.anyInt())).thenReturn("M");
+        String respuesta=calculadora.calcular(1000);
+        assertThat(respuesta,equalTo("M"));
+    }
+
+    @Test
+    public void cuandoIngresaMenos10EntoncesRetornaVacio(){
+        Mockito.when(calculadora.construirRomano(Mockito.anyInt())).thenReturn("");
+        String respuesta=calculadora.calcular(-10);
+        assertThat(respuesta,equalTo(""));
+    }
+
+
 }
