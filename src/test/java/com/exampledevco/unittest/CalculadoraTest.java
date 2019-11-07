@@ -48,10 +48,10 @@ public class CalculadoraTest {
     }
 
     @Test
-    public void cuandoIngresaMenos10EntoncesRetornaVacio(){
-        Mockito.when(calculadora.construirRomano(Mockito.anyInt())).thenReturn("");
+    public void cuandoIngresaMenos10EntoncesRetornaNoExiste(){
+        Mockito.when(calculadora.construirRomano(Mockito.anyInt())).thenReturn("No Existe");
         String respuesta=calculadora.calcular(-10);
-        assertThat(respuesta,equalTo(""));
+        assertThat(respuesta,equalTo("No Existe"));
     }
 
 

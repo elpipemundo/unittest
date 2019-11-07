@@ -13,9 +13,9 @@ public class Calculadora {
             return "V";
         }
         else if(numeroArabigo<1){
-            return "";
+            return "No Existe";
         }
-        if(numeroArabigo==1000){
+        else if(numeroArabigo==1000){
             return "M";
         }
         else{
